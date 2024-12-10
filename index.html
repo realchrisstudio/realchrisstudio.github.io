@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Gallery</title>
+    <title>Chris Studio Product Gallery</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -13,12 +13,44 @@
         .product-card:hover {
             transform: scale(1.05);
         }
+        .wide-gallery {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .wide-gallery .gallery-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .wide-gallery img {
+            max-height: 400px;
+            width: auto;
+            margin: 0 5px;
+            border-radius: 10px;
+        }
+        .wide-gallery .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .wide-gallery .nav-button.left {
+            left: 10px;
+        }
+        .wide-gallery .nav-button.right {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">E-commerce Gallery</a>
+            <a class="navbar-brand" href="#">Chris Studio Product Gallery</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,10 +60,10 @@
                         <a class="nav-link active" aria-current="page" href="#gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="https://forms.gle/fX2X6xrZ1DnFvYgy8" target="_blank">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -39,40 +71,42 @@
     </nav>
 
     <div class="container mt-5" id="gallery">
-        <h1 class="text-center mb-4">Product Gallery</h1>
+
+
+        <h1 class="text-center mb-4">Chris Studio Product Gallery</h1>
+
+
+        <div class="mb-4">
+            <input type="text" id="searchBox" class="form-control" placeholder="Search for products by name...">
+        </div>
+        
+        <h2 class="mt-4">TOEFL Exam Preparation</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-            <!-- Product 1 -->
-            <div class="col">
+            <!-- TOEFL Product 1 -->
+            <div class="col product-item" data-name="TOEFL Product 1">
                 <div class="card product-card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 1">
+                    <img src="img/thumbnail-us.png" class="card-img-top" alt="TOEFL Product 1">
                     <div class="card-body">
-                        <h5 class="card-title">Product 1</h5>
-                        <p class="card-text">This is a brief description of Product 1.</p>
-                        <a href="https://ko-fi.com/" class="btn btn-primary" target="_blank">Buy on Ko-fi</a>
+                        <h5 class="card-title">TOEFL High-Frequency Vocabulary Mastery Bundle</h5>
+                        <p class="card-text">🎓 Are you preparing for the TOEFL exam but struggling to remember all those challenging words? Our carefully curated TOEFL High-Frequency Vocabulary Bundle is specifically designed for students in Taiwan and Hong Kong to help you efficiently master the most critical vocabulary for the exam!.</p>
+                        <a href="https://ko-fi.com/s/4b4a667ce7" class="btn btn-primary" target="_blank">Preview on Ko-fi</a>
+                        <a href="https://christangstudio.gumroad.com/l/jvupkj" class="btn btn-secondary" target="_blank">Preview on Gumroad</a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Product 2 -->
-            <div class="col">
+        <h2 class="mt-4">TOEFL 備考</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <!-- TOEFL English Product 1 -->
+            <div class="col product-item" data-name="TOEFL English Product 1">
                 <div class="card product-card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 2">
+                    <img src="img/thumbnail-cn.png" class="card-img-top" alt="TOEFL English Product 1">
                     <div class="card-body">
-                        <h5 class="card-title">Product 2</h5>
-                        <p class="card-text">This is a brief description of Product 2.</p>
-                        <a href="https://ko-fi.com/" class="btn btn-primary" target="_blank">Buy on Ko-fi</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="col">
-                <div class="card product-card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Product 3</h5>
-                        <p class="card-text">This is a brief description of Product 3.</p>
-                        <a href="https://ko-fi.com/" class="btn btn-primary" target="_blank">Buy on Ko-fi</a>
+                        <h5 class="card-title">TOEFL托福高頻詞彙資料包+默寫表</h5>
+                        <p class="card-text">🎓 托福高頻詞彙精講資料包，全方位助你輕鬆提分！ 🎓 您是否正在準備托福考試，卻苦於記憶大量單詞？我們精心整理的 托福高頻詞彙資料包，專為台灣與香港考生設計，幫助您高效掌握考試中最重要的詞彙！.</p>
+                        <a href="https://ko-fi.com/s/a47baf7ae4" class="btn btn-primary" target="_blank">Ko-fi上預覽</a>
+                        <a href="https://christangstudio.gumroad.com/l/diovo" class="btn btn-secondary" target="_blank">Gumroad上預覽</a>
                     </div>
                 </div>
             </div>
@@ -81,11 +115,27 @@
 
     <footer class="bg-light text-center text-lg-start mt-5">
         <div class="container p-4">
-            <p>&copy; 2024 E-commerce Gallery. All rights reserved.</p>
+            <p>&copy; 2024 Chris Studio. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('searchBox').addEventListener('input', function() {
+            const searchValue = this.value.toLowerCase().split(' ');
+            const products = document.querySelectorAll('.product-item');
+
+            products.forEach(product => {
+                const productText = product.innerText.toLowerCase();
+                if (searchValue.some(word => productText.includes(word))) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
